@@ -57,6 +57,7 @@ public class NotepadActivity extends AppCompatActivity {
         op.open();
         op.addNote(note);
         op.close();
+        refreshListView();
     }
 
     public void refreshListView() {
