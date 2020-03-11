@@ -84,6 +84,10 @@ public class NotepadActivity extends BaseActivity implements AdapterView.OnItemC
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.clear:
+                if (noteList.size() == 0) {
+                    Toast.makeText(getApplicationContext(), "当前没有任何笔记！", Toast.LENGTH_SHORT).show();
+                    break;
+                }
                 new AlertDialog.Builder(NotepadActivity.this)
                         .setMessage("确认清空所有笔记？")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
