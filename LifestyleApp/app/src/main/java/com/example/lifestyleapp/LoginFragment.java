@@ -65,7 +65,7 @@ public class LoginFragment extends Fragment {
                 if(!loginName.isEmpty()&&!loginPassword.isEmpty())
                 {
                     //登录
-                    register(loginName,loginPassword,v);
+                    login(loginName,loginPassword,v);
                 }
                 else
                 {
@@ -76,7 +76,7 @@ public class LoginFragment extends Fragment {
             }
         });
 
-        //响应注册
+        //响应登录
         TextView textViewRegister=(TextView)v.findViewById(R.id.textViewRegister);
         //添加侦听器，响应点击
         textViewRegister.setOnClickListener(new View.OnClickListener()
@@ -98,7 +98,7 @@ public class LoginFragment extends Fragment {
     }
 
     //登录函数
-    private void register(String name,String password,View view)
+    private void login(String name,String password,View view)
     {
         String LoginUrl = URL_Login + "?account=" + name + "&password=" + password;
         new MyAsyncTask(view,textViewMessage).execute(LoginUrl);
