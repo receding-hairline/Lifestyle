@@ -1,0 +1,3 @@
+本次实现了将用户发送的帖子保存到数据库中，MyFirstAppplication2代码是在原有UI基础上改进，
+server文件则是在eclipse中的服务器端代码，在其中sevlet文件中主要是用到LogUtil、DataBaseUtil和SavePost
+这三个类来实现接收并且存储到数据库。
